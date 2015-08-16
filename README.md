@@ -1,5 +1,5 @@
 ElasticsearchWebApiSample
-===================++====
+=========================
 
 This is a sample Web Api project project using the NEST library. This project has been written using Visual Studio Express 2015 for Web. This project has been tested with ElasticSearch Server v1.7.1.
 
