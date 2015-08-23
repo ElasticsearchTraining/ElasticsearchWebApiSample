@@ -51,7 +51,7 @@ namespace ElasticsearchWebApiSample.Controllers
             esClient = new ElasticClient(connectionSettings);
 
             var product = new Product(Convert.ToInt32(postData.Get("id")),
-                postData.Get("name"),
+                postData.Get("title"),
                 postData.Get("brand"),
                 Convert.ToDouble(postData.Get("price")));
 
