@@ -1,5 +1,5 @@
-packages
-ElasticsearchWebApiSample/bin
-ElasticsearchWebApiSample/obj
+packages/
+ElasticsearchWebApiSample/bin/
+ElasticsearchWebApiSample/obj/
 ElasticsearchWebApiSample/obj/Debug
 .vs/ElasticsearchWebApiSample/v14/.suo
