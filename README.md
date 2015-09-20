@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/uk5978udclo9e9d0?svg=true)](https://ci.appveyor.com/project/rajanm/elasticsearchwebapisample)
+
 ElasticsearchWebApiSample
 =========================
 
