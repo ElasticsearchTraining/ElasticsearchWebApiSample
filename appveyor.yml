@@ -21,5 +21,5 @@ build:
 on_success:
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:appharbor_username):$env:appharbor_password@appharbor.com`n"
-  - git remote add appharbor https://$($env:appharbor_username)@appharbor.com/elasticsearchwebapisample.git
+  - git remote add appharbor https://$env:appharbor_username:$env:appharbor_password@appharbor.com/elasticsearchwebapisample.git
   - git push appharbor master
