@@ -18,8 +18,8 @@ build:
   project: ElasticsearchWebApiSample.sln
   verbosity: normal
 
-on_success:
-  - git config --global credential.helper store
-  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:appharbor_username):$env:appharbor_password@appharbor.com`n"
-  - git remote add appharbor https://$env:appharbor_username:$env:appharbor_password@appharbor.com/elasticsearchwebapisample.git
-  - git push appharbor master
+##on_success:
+##  - git config --global credential.helper store
+##  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:appharbor_username):$env:appharbor_password@appharbor.com`n"
+##  - git remote add appharbor https://$env:appharbor_username:$env:appharbor_password@appharbor.com/elasticsearchwebapisample.git
+##  - git push appharbor master
