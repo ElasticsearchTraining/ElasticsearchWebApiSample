@@ -1,0 +1,25 @@
+version: 1.0.{build}
+
+## encrypted appharbor username and password
+environment:
+  appharbor_username:
+    secure: xsW5aI1xLDwuLHDh05OAhg==
+  appharbor_password:
+    secure: dJlh6Ik2i2Cw34GDiS1BsA==
+
+branches:
+  only:
+  - master
+
+before_build:
+- nuget restore ElasticsearchWebApiSample.sln
+
+build:
+  project: ElasticsearchWebApiSample.sln
+  verbosity: normal
+
+on_success:
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:appharbor_username):$env:appharbor_password@appharbor.com`n"
+  - git remote add appharbor https://$env:appharbor_username@appharbor.com/elasticsearchwebapisample.git
+  - git push appharbor master
